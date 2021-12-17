@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>php-badwords</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -17,26 +17,15 @@
             id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae
             purus faucibus ornare';
     ?>
-
-    <div class="text">
-        <h2>Il mio paragrafo è:</h2>
-        <p><?php echo $text ?></p>
-        <h2><?php echo "Il mio paragrafo è lungo:" . " " . strlen($text) ?></h2>
+    <div class="censored-text">
+        <h2>Stesso testo ma censurato:</h2>
+        <?php
+        $badword = $_GET['badword'];
+        $new_str = str_replace($badword, "***", $text);
+        ?>
+        <?php echo $new_str;
+        ?>
     </div>
-    <div>
-
-        <form name="form" action="censored.php" method="get">
-            <label for="badword"><strong>Word to censor</strong></label><br>
-            <input type="text" id="badword" name="badword">
-            <input type="submit" value="Submit">
-        </form>
-
-        <div class="censored-text">
-
-        </div>
-
-    </div>
-
 </body>
 
 </html>
