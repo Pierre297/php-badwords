@@ -1,0 +1,13 @@
+.text {
+  width: 500px;
+  text-align: center;
+}
+
+form {
+  margin: 50px 0px 20px 120px;
+}
+
+.censored-text {
+  width: 500px;
+  text-align: center;
+}
