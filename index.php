@@ -31,10 +31,12 @@
             <input type="submit" value="Submit">
         </form>
 
-        <?php echo $_GET['badword']; ?>
+        <?php $_GET['badword']; ?>
         <div class="censored-text">
             <?php
-            echo str_replace($badword, "***", $text);
+            $new_str = str_replace($badword, "***", $text);
+            ?>
+            <?php // echo $new_str; 
             ?>
         </div>
 
